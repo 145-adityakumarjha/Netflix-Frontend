@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Netflix Clone Advanced</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- LOGIN PAGE -->
+<section id="loginPage">
+<div class="login-box">
+
+<h1>Sign In</h1>
+
+<input id="email" type="text" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">
+Sign In
+</button>
+
+<p class="demo">
+Demo Login <br>
+admin / 1234
+</p>
+
+</div>
+</section>
+
+
+
+<!-- MAIN APP -->
+<div id="app">
+
+
+<nav>
+
+<div class="logo">
+NETFLIX
+</div>
+
+
+<div class="nav-right">
+
+<input
+type="text"
+id="searchBar"
+placeholder="Search movies..."
+onkeyup="searchMovies()"
+/>
+
+<img
+class="profile"
+src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+/>
+
+<button class="logout-btn"
+onclick="logout()">
+Logout
+</button>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO BANNER -->
+<header class="banner">
+
+<div class="banner-content">
+
+<h1>Money Heist S1</h1>
+
+<p>
+Set in Madrid, a mysterious man known as the "Professor" recruits a group of eight people, who choose city names as their aliases for anonymity, to carry out an ambitious plan that involves entering the Royal Mint of Spain, and escaping with €984 million.
+</p>
+
+<button class="btn play"
+onclick="openTrailer('_InqQJRqGW4')">
+▶ Play Trailer
+</button>
+
+<button class="btn info">
+More Info
+</button>
+
+</div>
+
+</header>
+
+
+
+
+<!-- BOLLYWOOD MOVIES -->
+<section class="section">
+<h2>Bollywood Movies</h2>
+
+<div class="movies">
+
+<div class="card"
+data-title="RRR"
+onclick="openTrailer('NgBoMJy386M')">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/c7d5e4140074961.623b147c53ca8.jpg">
+<h3>RRR</h3>
+</div>
+
+<div class="card"
+data-title="Pathaan"
+onclick="openTrailer('vqu4z34wENw')">
+<img src="https://i.ytimg.com/vi/XMIeCzlouS8/maxresdefault.jpg">
+<h3>Pathaan</h3>
+</div>
+
+<div class="card"
+data-title="Jawan"
+onclick="openTrailer('MWOlnZSnXJo')">
+<img src="https://www.bollywoodhungama.com/wp-content/uploads/2021/07/Jawan-1.jpeg">
+<h3>Jawan</h3>
+</div>
+
+</div>
+</section>
+
+
+
+
+<!-- BOLLYWOOD SERIES -->
+<section class="section">
+<h2>Bollywood Series</h2>
+
+<div class="movies">
+
+<div class="card"
+data-title="Sacred Games"
+onclick="openTrailer('28j8h0RRov4')">
+<img src="https://m.media-amazon.com/images/M/MV5BN2EyODc1MDAtNTg0ZC00MjRhLTg1NzctM2NjYTlmOGMwYWNiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+<h3>Sacred Games</h3>
+</div>
+
+<div class="card"
+data-title="Mirzapur"
+onclick="openTrailer('ZNeGF-PvRHY')">
+<img src="https://m.media-amazon.com/images/I/81Gw6dDnddL._AC_UF894,1000_QL80_.jpg">
+<h3>Mirzapur</h3>
+</div>
+
+<div class="card"
+data-title="Family Man"
+onclick="openTrailer('XatRGut65VI')">
+<img src="https://image.tmdb.org/t/p/original/rV1UTbYb5I8UAAcuTgOnEnOJhXf.jpg">
+<h3>Family Man</h3>
+</div>
+
+</div>
+</section>
+
+
+
+
+<!-- HOLLYWOOD MOVIES -->
+<section class="section">
+<h2>Hollywood Movies</h2>
+
+<div class="movies">
+
+<div class="card"
+data-title="Avengers Endgame"
+onclick="openTrailer('TcMBFSGVi1c')">
+<img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg">
+<h3>Avengers Endgame</h3>
+</div>
+
+<div class="card"
+data-title="Batman"
+onclick="openTrailer('mqqft2x_Aa4')">
+<img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg">
+<h3>Batman</h3>
+</div>
+
+<div class="card"
+data-title="Inception"
+onclick="openTrailer('YoHD9XEInc0')">
+<img src="https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg">
+<h3>Inception</h3>
+</div>
+
+</div>
+</section>
+
+
+
+
+<!-- HOLLYWOOD SERIES -->
+<section class="section">
+<h2>Hollywood Series</h2>
+
+<div class="movies">
+
+<div class="card"
+data-title="Breaking Bad"
+onclick="openTrailer('HhesaQXLuRY')">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/6e04e4104134375.5f5c010ef323a.jpg">
+<h3>Breaking Bad</h3>
+</div>
+
+<div class="card"
+data-title="Dark"
+onclick="openTrailer('rrwycJ08PSA')">
+<img src="https://m.media-amazon.com/images/M/MV5BOWJjMGViY2UtNTAzNS00ZGFjLWFkNTMtMDBiMDMyZTM1NTY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+<h3>Dark</h3>
+</div>
+
+<div class="card"
+data-title="Wednesday"
+onclick="openTrailer('Di310WS8zLk')">
+<img src="https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg">
+<h3>Wednesday</h3>
+</div>
+
+</div>
+</section>
+
+
+<footer>
+Netflix Clone Advanced Demo
+</footer>
+
+
+</div>
+
+
+
+<!-- Trailer Modal -->
+<div id="trailerModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close"
+onclick="closeTrailer()">
+×
+</span>
+
+<iframe
+id="trailer"
+width="100%"
+height="500"
+src=""
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
